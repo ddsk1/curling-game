@@ -19,4 +19,4 @@ Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'
 ```
 在训练过程中，随机抽样一批数据用于更新神经网络模型。
 
-![ ](https://github.com/ddsk1/curling-game/blob/main/curling.gif)
+![冰壶](https://github.com/ddsk1/curling-game/blob/main/curling.gif)
