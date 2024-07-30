@@ -4,8 +4,9 @@
 实验中，使用的核心方法为深度Q网络，使用三层全连接神经网络，每层后接relu近似Q函数，输入为游戏内的特征向量，包括冰壶、目标坐标与速度。输出为四个动作的Q值。
 DQN的原理为因为最终策略的Q函数满足贝尔曼方程：
 <br>
+<p align='center'>
 $$Q^\pi\left(s,a\right)=r+\gammaQ^\pi\left(s^\prime,\pi\left(s^\prime\right)\right)$$
-
+</p>
 则使用迭代的方法通过减小误差δ逼近真正的Q函数：
 
 $$\delta=Q\left(s,a\right)-\left(r+\gamma\max_a^\prime{Q}\left(s^\prime,a\right)\right)$$
