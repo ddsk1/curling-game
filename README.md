@@ -8,12 +8,15 @@ DQN的原理为因为最终策略的Q函数满足贝尔曼方程：
 $$Q^\pi\left(s,a\right)=r+\gammaQ^\pi\left(s^\prime,\pi\left(s^\prime\right)\right)$$
 </p>
 则使用迭代的方法通过减小误差δ逼近真正的Q函数：
-
+<br>
+<p align='center'>
 $$\delta=Q\left(s,a\right)-\left(r+\gamma\max_a^\prime{Q}\left(s^\prime,a\right)\right)$$
+</p>
 而损失函数使用huber loss，其特点为当误差较小时为二次方，误差较大时为线性，比较平缓：
-
+<br>
+<p align='center'>
 $$\mathcal{L}=\frac{1}{\left|B\right|}\sum_{\left(s,a,s^\prime,r\right)\inB}\mathcal{L}\left(\delta\right)$$
-
+</p>
 为了平衡样本的相关性（可能存在连续样本之间存在相关导致学习了错误的经验）采用了经验回放机制来存储并随机抽样过去的经验。用一个大小为10000的经验回放缓冲区来存储游戏的状态转移信息（2000）。
 ```python
 Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
