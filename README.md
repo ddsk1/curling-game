@@ -19,12 +19,10 @@ $$\mathcal{L}=\frac{1}{\left|B\right|}\sum_{\left(s,a,s^\prime,r\right)\in B}\ma
 </p>
 为了平衡样本的相关性（可能存在连续样本之间存在相关导致学习了错误的经验）采用了经验回放机制来存储并随机抽样过去的经验。用一个大小为10000的经验回放缓冲区来存储游戏的状态转移信息（2000）。
 ```
-Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
-```
+Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))```
 ```python  
 for i or range(10):  
-    print(i)  
-```
+    print(i)  ```
 
 在训练过程中，随机抽样一批数据用于更新神经网络模型。
 
