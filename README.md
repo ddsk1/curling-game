@@ -21,6 +21,11 @@ $$\mathcal{L}=\frac{1}{\left|B\right|}\sum_{\left(s,a,s^\prime,r\right)\in B}\ma
 ```
 Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
 ```
+```python  
+for i or range(10):  
+    print(i)  
+```
+
 在训练过程中，随机抽样一批数据用于更新神经网络模型。
 
 ![冰壶](https://github.com/ddsk1/curling-game/blob/main/%E5%86%B0%E5%A3%B6.gif)
